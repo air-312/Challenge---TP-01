@@ -6,7 +6,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    border: 1px solid #ff0303;
 }
 body{
     font-family: 'Poppins', sans-serif;
@@ -112,12 +111,12 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-bottom: 25px;
 }
 .title-h2 {
     text-transform: uppercase;
     font-weight: 200;
     font-size: 2.5em;
-    margin-bottom: 25px;
 }
 .creation-header .seeall1{
     border: 1px solid #000;
@@ -147,6 +146,24 @@ header {
     display: inline-block;
     width: 230px; 
     overflow: hidden;
+    
+}
+.card-item:hover{
+    box-shadow: 10px 5px 5px #000;
+    transition: box-shadow 1s ease, transform 1s ease;
+    animation: card ease;
+    transform: scale(1.05) ;
+}
+@keyframes card {
+    0% { 
+        transform: scale(1); 
+    }
+    50% { 
+        transform: scale(1.05); 
+    }
+    100% { 
+        transform: scale(1); 
+    }
 }
 .card-item::after {
     content: "";
@@ -213,10 +230,72 @@ header {
         text-align: center;
     }
 }
-
-
-
-
+/*-----------------Footer-------------------------*/
+footer {
+    padding: 30px 180px;
+    margin-top: 60px;
+    background-color: #000;
+}
+.container-footer-top{
+    display: flex;
+    justify-content: space-between;
+}
+.rx-footer {
+    gap: 1em;
+}
+.rx-footer ion-icon {
+    color: #fff;
+    font-size: 20px;
+}
+.container-footer-bottom{
+    justify-content: space-between;
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+}
+.navbar-bottom nav ul{
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+}
+.navbar-bottom nav ul li a{
+    color: #fff;
+    text-decoration: none;
+}
+.b {
+    display: none;
+}
+.copyright {
+    color: #4b4a4a;
+}
+@media screen and (width < 914px) {
+    footer {
+        padding: 50px 30px;
+        text-align: center;
+    }
+    .container-footer-top{
+        flex-direction: column;
+    }
+    .a1{
+        display: none;
+    }
+    .container-footer-bottom{
+        justify-content: center;
+        flex-direction: column;
+    }
+    .navbar-bottom nav {
+        margin-bottom: 30px;
+    }
+    .navbar-bottom nav ul{
+        flex-direction: column;
+    }
+    .b {
+        display: block;
+    }
+    .b ion-icon{
+        font-size: 30px;
+    }
+}
 
 
 
