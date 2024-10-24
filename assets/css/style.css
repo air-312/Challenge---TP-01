@@ -12,7 +12,7 @@ body{
 }
 /*-----------------Header------------------------------*/
 header {
-    position: fixed;
+    position: absolute;
     width: 100%;
 }
 .container-header {
@@ -103,6 +103,66 @@ header {
     }
 }
 /*-----------------Section: Page Two-------------------------*/
+.pageTwo{
+    padding: 30px 180px;
+}
+.container-pageTwo{
+    display: flex;
+}
+.container-pageTwo img{
+    width: 600px;
+}
+.pageTwo-text{
+    background-color: #fff;
+    position: absolute;
+    margin: 93px 180px 0 450px;
+    padding: 120px 0 0 112px;
+}
+.pageTwo-text h2{
+    font-size: 40px;
+    text-transform: uppercase;
+    font-weight: 250;
+    line-height: 40px;
+    margin-bottom: 20px;
+}
+.pageTwo-text p{
+    width: 100%;
+    color: #706f6f;
+}
+@media screen and (width < 914px) {
+    .pageTwo{
+        padding: 30px;
+        height: 77vh;
+    }
+    .container-pageTwo{
+        flex-direction: column;
+    }
+    .container-pageTwo img{
+        width: 100%;
+    }
+    .pageTwo-text{
+        position: none;
+        background-color: none;
+        top: 56rem;
+        width: 81%;
+        margin:  30px 100px 30px 0 ;
+        padding: 0px ;
+    }
+    .pageTwo-text h2{
+        text-align: center;
+        font-size: 30px;
+        text-transform: uppercase;
+        font-weight: 250;
+        line-height: 40px;
+        margin-bottom: 20px;
+    }
+    .pageTwo-text p{
+        text-align: center;
+        width: 100%;
+        color: #706f6f;
+    }
+}
+
 /*-----------------Section: Creation -------------------------*/
 .creations {
     padding: 30px 180px;
@@ -151,20 +211,9 @@ header {
 .card-item:hover{
     box-shadow: 10px 5px 5px #000;
     transition: box-shadow 1s ease, transform 1s ease;
-    animation: card ease;
     transform: scale(1.05) ;
 }
-@keyframes card {
-    0% { 
-        transform: scale(1); 
-    }
-    50% { 
-        transform: scale(1.05); 
-    }
-    100% { 
-        transform: scale(1); 
-    }
-}
+
 .card-item::after {
     content: "";
     position: absolute;
@@ -200,12 +249,13 @@ header {
     .creation-header{
         justify-content: center;
     }
+    
     .card-container {
         grid-template-columns: repeat(1, 1fr);
         grid-gap: 1rem;
     }
     .card-item{
-        width: 372px; 
+        width: 100%; 
         height: 150px;
     }
     .card-item::after {
@@ -240,6 +290,7 @@ footer {
     display: flex;
     justify-content: space-between;
 }
+
 .rx-footer {
     gap: 1em;
 }
@@ -291,8 +342,10 @@ footer {
     }
     .b {
         display: block;
+        padding: 9px;
     }
     .b ion-icon{
+        
         font-size: 30px;
     }
 }
