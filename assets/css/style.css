@@ -123,4 +123,23 @@ header {
 }
 .card-container {
     display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1rem;
+    justify-content: ;
 }
+.card-item{
+    position: relative;
+    width: 150px;
+}
+.card-item img{
+    width: 100%;
+    display: block;
+}
+
+
+
+
+
+
+
+
