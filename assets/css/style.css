@@ -6,23 +6,100 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    border: 1px solid #ff0303;
 }
 body{
     font-family: 'Poppins', sans-serif;
 }
 /*-----------------Header------------------------------*/
 header {
-    display: flex;
-    justify-content: space-between;
-    padding: 30px 180px;
+    position: fixed;
+    width: 100%;
 }
-
-.navbar ul{
+.container-header {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 30px 180px; 
+    align-items: center;
+}
+.logo {
+    width: 150px; 
+}
+.navbar ul {
     display: flex;
     gap: 1.5rem;
     list-style: none;
 }
-.navbar ul li a{
+
+.navbar ul li a {
     text-decoration: none;
-    color: ;
+    color: #fff;
+}
+
+.navbar .menu-burger {
+    display: none;
+    text-decoration: none;
+    color: #fff;
+    font-size: 3rem;
+}
+
+@media screen and (width < 914px) { 
+    header {
+        width: 100%;
+    }
+    .container-header {
+        padding: 30px; 
+    }
+    .logo {
+        width: 180px; 
+    }
+    .navbar ul {
+        display: none; 
+    }
+    .navbar .menu-burger {
+        display: block; 
+    }
+}
+/*-----------------Section: Page One-------------------------*/
+.pageOne {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+    url("../images/desktop/image-hero.jpg");
+    background-size: cover;
+    height: auto;
+    width: 100%; 
+    display: flex; 
+    overflow: hidden;
+}
+.welcome {
+    padding: 230px 180px 30px 180px; 
+    
+}
+.title {
+    font-size: 4em;
+    width: 55%;
+    font-weight: 200;
+    letter-spacing:5px;
+    line-height: 60px;
+    text-transform:uppercase ;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 30px;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+@media screen and (width < 914px) {
+    .welcome {
+        padding: 230px 30px 280px 30px; 
+        
+    }
+    .title {
+        font-size: 2em;
+        width: 100%;
+        font-weight: 300;
+        line-height: 40px;
+        border: 2px solid #fff;
+        padding: 20px;
+    }
 }
